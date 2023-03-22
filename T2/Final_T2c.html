@@ -1,0 +1,39 @@
+
+<head>
+    <title>InfoVis - Task B3</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Final.css">
+</head>
+
+<a href="index.html" class="logo">
+    <i class="fa fa-home" style="font-size:40px;color:ececee;"></i>
+</a>
+  	<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  	<label for="menu-icon"></label>
+  	<nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a href="../T1/Final_T1a.html">Task 1</a></li>
+            <li><a href="Final_T2a.html">Task 2</a></li>
+            <li><a href="../T3/Final_T3a.html">Task 3</a></li>
+            <li><a href="../Group/Group.html">Our Group</a></li>
+        </ul>
+  	</nav>
+<body> 
+  	<div class="section-center">
+        <div id="chart" style="padding-top: 200px;">
+          
+        </div>
+        <br><br>
+        <a href="Final_T2a.html" class="btn btn3">1</a>
+        <a href="Final_T2b.html" class="btn btn3">2</a>
+        <a href="Final_T2c.html" class="btn btn3">3</a>
+        <a href="Final_T2d.html" class="btn btn3">Generalization</a>
+  	</div>
+      <script>
+        // Placeholder for the Vega-Lite JSON specification
+        var spec = {"$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "config": {"view": {"continuousHeight": 300, "continuousWidth": 400}}, "data": {"name": "data-ccbb1eab14910477dc95ec92817bffe4"}, "datasets": {"data-ccbb1eab14910477dc95ec92817bffe4": [{"Hired_count": 1, "Terminated_count": 0, "Year": 2006}, {"Hired_count": 2, "Terminated_count": 0, "Year": 2007}, {"Hired_count": 3, "Terminated_count": 0, "Year": 2008}, {"Hired_count": 7, "Terminated_count": 0, "Year": 2009}, {"Hired_count": 9, "Terminated_count": 1, "Year": 2010}, {"Hired_count": 83, "Terminated_count": 3, "Year": 2011}, {"Hired_count": 45, "Terminated_count": 8, "Year": 2012}, {"Hired_count": 44, "Terminated_count": 13, "Year": 2013}, {"Hired_count": 60, "Terminated_count": 13, "Year": 2014}, {"Hired_count": 36, "Terminated_count": 23, "Year": 2015}, {"Hired_count": 14, "Terminated_count": 22, "Year": 2016}, {"Hired_count": 6, "Terminated_count": 8, "Year": 2017}, {"Hired_count": 1, "Terminated_count": 13, "Year": 2018}]}, "hconcat": [{"vconcat": [{"encoding": {"x": {"field": "Year", "scale": {"domain": [2000, 2020]}, "type": "quantitative"}, "y": {"field": "Hired_count", "type": "quantitative"}}, "mark": "point", "selection": {"selector001": {"type": "interval"}}}, {"encoding": {"x": {"field": "Year", "type": "quantitative"}, "y": {"field": "Hired_count", "type": "quantitative"}}, "mark": "bar", "transform": [{"filter": {"selection": "selector001"}}]}]}, {"vconcat": [{"encoding": {"x": {"field": "Year", "scale": {"domain": [2000, 2020]}, "type": "quantitative"}, "y": {"field": "Terminated_count", "type": "quantitative"}}, "mark": "point", "selection": {"selector002": {"type": "interval"}}}, {"encoding": {"x": {"field": "Year", "type": "quantitative"}, "y": {"field": "Terminated_count", "type": "quantitative"}}, "mark": "bar", "transform": [{"filter": {"selection": "selector002"}}]}]}]};
+        vegaEmbed('#chart', spec);
+    </script></body>

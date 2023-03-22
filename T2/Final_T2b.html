@@ -1,0 +1,40 @@
+
+<head>
+    <title>InfoVis - Task B2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Final.css">
+</head>
+
+<a href="index.html" class="logo">
+    <i class="fa fa-home" style="font-size:40px;color:ececee;"></i>
+</a>
+
+  	<input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
+  	<label for="menu-icon"></label>
+  	<nav class="nav"> 		
+        <ul class="pt-5">
+            <li><a href="../T1/Final_T1a.html">Task 1</a></li>
+            <li><a href="Final_T2a.html">Task 2</a></li>
+            <li><a href="../T3/Final_T3a.html">Task 3</a></li>
+            <li><a href="../Group/Group.html">Our Group</a></li>
+        </ul>
+  	</nav>
+<body> 
+  	<div class="section-center">
+        <div id="chart" style="padding-top: 200px;">
+          
+        </div>
+        <br><br>
+        <a href="Final_T2a.html" class="btn btn3">1</a>
+        <a href="Final_T2b.html" class="btn btn3">2</a>
+        <a href="Final_T2c.html" class="btn btn3">3</a>
+        <a href="Final_T2d.html" class="btn btn3">Generalization</a>
+  	</div>
+      <script>
+        // Placeholder for the Vega-Lite JSON specification
+        var spec = {"$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "center": true, "config": {"view": {"continuousHeight": 300, "continuousWidth": 400}}, "datasets": {"data-149678ec0370b74ee4eba25c495f2c33": [{"EmploymentYear": 2006, "count": 1}, {"EmploymentYear": 2007, "count": 2}, {"EmploymentYear": 2008, "count": 3}, {"EmploymentYear": 2009, "count": 7}, {"EmploymentYear": 2010, "count": 9}, {"EmploymentYear": 2011, "count": 83}, {"EmploymentYear": 2012, "count": 45}, {"EmploymentYear": 2013, "count": 44}, {"EmploymentYear": 2014, "count": 60}, {"EmploymentYear": 2015, "count": 36}, {"EmploymentYear": 2016, "count": 14}, {"EmploymentYear": 2017, "count": 6}, {"EmploymentYear": 2018, "count": 1}], "data-1dbf308165344c665fbbe41db3e5e886": [{"TerminationYear": 2010, "count": 1}, {"TerminationYear": 2011, "count": 3}, {"TerminationYear": 2012, "count": 8}, {"TerminationYear": 2013, "count": 13}, {"TerminationYear": 2014, "count": 13}, {"TerminationYear": 2015, "count": 23}, {"TerminationYear": 2016, "count": 22}, {"TerminationYear": 2017, "count": 8}, {"TerminationYear": 2018, "count": 13}], "data-ccbb1eab14910477dc95ec92817bffe4": [{"Hired_count": 1, "Terminated_count": 0, "Year": 2006}, {"Hired_count": 2, "Terminated_count": 0, "Year": 2007}, {"Hired_count": 3, "Terminated_count": 0, "Year": 2008}, {"Hired_count": 7, "Terminated_count": 0, "Year": 2009}, {"Hired_count": 9, "Terminated_count": 1, "Year": 2010}, {"Hired_count": 83, "Terminated_count": 3, "Year": 2011}, {"Hired_count": 45, "Terminated_count": 8, "Year": 2012}, {"Hired_count": 44, "Terminated_count": 13, "Year": 2013}, {"Hired_count": 60, "Terminated_count": 13, "Year": 2014}, {"Hired_count": 36, "Terminated_count": 23, "Year": 2015}, {"Hired_count": 14, "Terminated_count": 22, "Year": 2016}, {"Hired_count": 6, "Terminated_count": 8, "Year": 2017}, {"Hired_count": 1, "Terminated_count": 13, "Year": 2018}]}, "vconcat": [{"hconcat": [{"data": {"name": "data-149678ec0370b74ee4eba25c495f2c33"}, "encoding": {"x": {"field": "EmploymentYear", "type": "ordinal"}, "y": {"field": "count", "type": "quantitative"}}, "height": 200, "mark": "bar", "title": "Number of Employees Hired in Each Year", "width": 400}, {"data": {"name": "data-1dbf308165344c665fbbe41db3e5e886"}, "encoding": {"x": {"field": "TerminationYear", "type": "ordinal"}, "y": {"field": "count", "type": "quantitative"}}, "height": 200, "mark": "bar", "title": "Number of Employees Terminated in Each Year", "width": 400}]}, {"data": {"name": "data-ccbb1eab14910477dc95ec92817bffe4"}, "layer": [{"encoding": {"x": {"field": "Year", "title": "Year", "type": "quantitative"}, "y": {"field": "Hired_count", "title": "Number of Employee", "type": "quantitative"}}, "mark": {"color": "blue", "type": "line"}, "title": "Employee Turnover by Department and Marital Status"}, {"encoding": {"x": {"field": "Year", "title": "Year", "type": "quantitative"}, "y": {"field": "Terminated_count", "title": "Number of Employee", "type": "quantitative"}}, "mark": {"color": "red", "type": "line"}, "title": "Number of Employee Hired and Terminated each Year"}]}]};
+        vegaEmbed('#chart', spec);
+    </script></body>
